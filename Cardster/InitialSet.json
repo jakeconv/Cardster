@@ -1,0 +1,282 @@
+{
+    "cards" : [
+        {
+            "front" : "diamond",
+            "back" : "el diamante"
+        },
+        {
+         "front" : "to approach",
+         "back" : "acercar"
+        },
+        {
+            "front" : "ghost",
+            "back" : "espíritu"
+        },
+        {
+            "front" : "uncomfotable",
+            "back" : "incomodo"
+        },
+        {
+            "front" : "well (as in 'well, laney')",
+            "back" : "pues"
+        },
+        {
+            "front" : "compliment",
+            "back" : "el piropo"
+        },
+        {
+            "front" : "courtesy",
+            "back" : "cortesía"
+        },
+        {
+            "front" : "to treat/try",
+            "back" : "tratar"
+        },
+        {
+            "front" : "abruptly",
+            "back" : "abruptamente"
+        },
+        {
+            "front" : "ground",
+            "back" : "el suelo"
+        },
+        {
+            "front" : "nightmare",
+            "back" : "pesadilla"
+        },
+        {
+            "front" : "arm",
+            "back" : "el brazo"
+        },
+        {
+            "front" : "to vomit",
+            "back" : "vomitar"
+        },
+        {
+            "front" : "to jump",
+            "back" : "saltar"
+        },
+        {
+            "front" : "to hit",
+            "back" : "pegar"
+        },
+        {
+            "front" : "nose",
+            "back" : "la nariz"
+        },
+        {
+            "front" : "horridly",
+            "back" : "horrorizada"
+        },
+        {
+            "front" : "yahoo",
+            "back" : "uaju"
+        },
+        {
+            "front" : "to grab",
+            "back" : "agarrar"
+        },
+        {
+            "front" : "mysteriously",
+            "back" : "misteriosamente"
+        },
+        {
+            "front" : "to wink",
+            "back" : "guiñar"
+        },
+        {
+            "front" : "snob",
+            "back" : "el esnob"
+        },
+        {
+            "front" : "advice",
+            "back" : "el consejo"
+        },
+        {
+            "front" : "interest",
+            "back" : "el interés"
+        },
+        {
+            "front" : "palm tree",
+            "back" : "la palmera"
+        },
+        {
+            "front" : "view (like a scene)",
+            "back" : "la vista"
+        },
+        {
+            "front" : "to explain",
+            "back" : "explicar"
+        },
+        {
+            "front" : "so",
+            "back" : "así"
+        },
+        {
+            "front" : "then",
+            "back" : "luego"
+        },
+        {
+            "front" : "at last",
+            "back" : "por fin"
+        },{
+            "front" : "nevertheless",
+            "back" : "sin embargo"
+        },{
+            "front" : "tower",
+            "back" : "la torre"
+        },
+        {
+            "front" : "sound",
+            "back" : "el sonido"
+        },
+        {
+            "front" : "half asleep",
+            "back" : "media dormida"
+        },
+        {
+            "front" : "it is",
+            "back" : "sea"
+        },
+        {
+            "front" : "tower",
+            "back" : "la torre"
+        },
+        {
+            "front" : "to leave",
+            "back" : "dejar"
+        },
+        {
+            "front" : "upon",
+            "back" : "al"
+        },
+        {
+            "front" : "line",
+            "back" : "la fila"
+        },
+        {
+            "front" : "to sit",
+            "back" : "sentar"
+        },
+        {
+            "front" : "soft",
+            "back" : "suave"
+        },
+        {
+            "front" : "a lot",
+            "back" : "muchísmo"
+        },
+        {
+            "front" : "over there",
+            "back" : "por allí"
+        },
+        {
+            "front" : "enthusiasm",
+            "back" : "entusimaso"
+        },
+        {
+            "front" : "spontaneous",
+            "back" : "espontánea"
+        },
+        {
+            "front" : "adventurous",
+            "back" : "aventurera"
+        },
+        {
+            "front" : "in fornt of",
+            "back" : "frente"
+        },
+        {
+            "front" : "ice cream shop",
+            "back" : "la heladería"
+        },
+        {
+            "front" : "glass",
+            "back" : "el cristal"
+        },
+        {
+            "front" : "image",
+            "back" : "la imagen"
+        },
+        {
+            "front" : "ridiculous",
+            "back" : "ridículo"
+        },
+        {
+            "front" : "shameful",
+            "back" : "avergonzada"
+        },
+        {
+            "front" : "team",
+            "back" : "el equipo"
+        },
+        {
+            "front" : "camp",
+            "back" : "el campamento"
+        },
+        {
+            "front" : "altough",
+            "back" : "aunque"
+        },
+        {
+            "front" : "dumb",
+            "back" : "tonto"
+        },
+        {
+            "front" : "anxiously",
+            "back" : "ansiosamente"
+        },
+        {
+            "front" : "neither",
+            "back" : "ni"
+        },
+        {
+            "front" : "how",
+            "back" : "podria"
+        },
+        {
+            "front" : "to escape",
+            "back" : "escapar"
+        },
+        {
+            "front" : "to surprise",
+            "back" : "sorprendir"
+        },
+        {
+            "front" : "to mention",
+            "back" : "mencionar"
+        },
+        {
+            "front" : "proud",
+            "back" : "orgulloso"
+        },
+        {
+            "front" : "great uncle",
+            "back" : "tío abuelo"
+        },
+        {
+            "front" : "the rest",
+            "back" : "el resto"
+        },
+        {
+            "front" : "I realized that...",
+            "back" : "dio cuenta de"
+        },
+        {
+            "front" : "to get dirty",
+            "back" : "ensuciarse"
+        },
+        {
+            "front" : "sticky",
+            "back" : "pegajoso"
+        },
+        {
+            "front" : "tower",
+            "back" : "la torre"
+        },
+        {
+            "front" : "to attend",
+            "back" : "asistir"
+        }
+    ]
+}
