@@ -9,9 +9,10 @@ import UIKit
 
 class CardViewController: UIViewController {
 
-    @IBOutlet weak var cardLabel: UILabel!
+    @IBOutlet weak var cardButton: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var flagButton: UIButton!
+    @IBOutlet weak var progressLabel: UILabel!
     
     var deckManager = DeckManager(cardFileName: "Whatever")
     
@@ -21,17 +22,20 @@ class CardViewController: UIViewController {
         updateViewFromModel()
     }
 
-    @IBAction func flipButtonPressed(_ sender: Any) {
-        deckManager.flip()
+    @IBAction func backButtonPressed(_ sender: Any) {
+        // Go back to the last card
+        deckManager.lastCard()
         updateViewFromModel()
     }
     
     @IBAction func flagButtonPressed(_ sender: Any) {
+        // Flag the current card for review
         deckManager.flag()
         updateViewFromModel()
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        // Go to the next card
         deckManager.nextCard()
         // Check and see if the deck has been completed
         if (deckManager.deckHasCompleted()) {
@@ -41,16 +45,29 @@ class CardViewController: UIViewController {
         updateViewFromModel()
     }
     
+    @IBAction func cardButtonPressed(_ sender: UIButton) {
+        // User tapped on the index card.  Flip the card.
+        deckManager.flip()
+        updateViewFromModel()
+    }
+    
     func updateViewFromModel() {
         // Update the progress and label text
         print(deckManager.getProgress())
         progressBar.progress = deckManager.getProgress()
         let currentCard = deckManager.getCurrentCard()
+        progressLabel.text = "Card \(deckManager.currentCardNumber()) of \(deckManager.count())"
         if (deckManager.currentCardIsFlipped) {
-            cardLabel.text = currentCard.back
+            UIView.performWithoutAnimation {
+                cardButton.setTitle(currentCard.back, for: .normal)
+                cardButton.layoutIfNeeded()
+            }
         }
         else {
-            cardLabel.text = currentCard.front
+            UIView.performWithoutAnimation {
+                cardButton.setTitle(currentCard.front, for: .normal)
+                cardButton.layoutIfNeeded()
+            }
         }
         if (currentCard.isFlagged) {
             flagButton.setTitle("Unflag", for: .normal)

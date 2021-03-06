@@ -54,6 +54,25 @@ struct DeckManager {
         currentCardIsFlipped = false
     }
     
+    mutating func lastCard() {
+        // Go back to the previous card
+        if (indexOfCurrentCard == 0) {
+            // Nothing to go back to
+            return
+        } else {
+            indexOfCurrentCard -= 1
+            currentCardIsFlipped = false
+        }
+    }
+    
+    func count() -> Int {
+        return cards.count
+    }
+    
+    func currentCardNumber() -> Int {
+        return indexOfCurrentCard + 1
+    }
+    
     mutating func flag() {
         // Flag the current card for follow-up
         if (cards[indexOfCurrentCard].isFlagged) {
