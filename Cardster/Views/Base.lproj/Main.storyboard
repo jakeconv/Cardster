@@ -16,25 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxI-dE-Jgg">
-                                <rect key="frame" x="47" y="91" width="320" height="579"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="q7X-30-fzX">
-                                <rect key="frame" x="50" y="678" width="314" height="184"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="e3o-0A-9Az">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-TH-YU1">
+                                <rect key="frame" x="47" y="714" width="314" height="148"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-XF-E7Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="40"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ui1-eN-T6A">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="E12-1v-QTk"/>
+                                        </constraints>
                                     </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAT-gd-aDk">
-                                        <rect key="frame" x="0.0" y="48" width="314" height="40"/>
+                                        <rect key="frame" x="0.0" y="12" width="314" height="40"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Fng-ZA-cCC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Flip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -43,12 +43,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMo-f0-p6Q">
-                                        <rect key="frame" x="0.0" y="96" width="314" height="40"/>
+                                        <rect key="frame" x="0.0" y="60" width="314" height="40"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="x0C-Zb-qeg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Flag">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -57,12 +57,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6C-vW-avY">
-                                        <rect key="frame" x="0.0" y="144" width="314" height="40"/>
+                                        <rect key="frame" x="0.0" y="108" width="314" height="40"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="XU4-3u-MEh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -72,29 +72,41 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxI-dE-Jgg">
+                                <rect key="frame" x="20" y="64" width="374" height="630"/>
+                                <color key="backgroundColor" red="1" green="0.98039215690000003" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jxI-dE-Jgg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="VjM-LD-RtC"/>
-                            <constraint firstItem="q7X-30-fzX" firstAttribute="top" secondItem="jxI-dE-Jgg" secondAttribute="bottom" constant="8" id="fel-0O-5Eh"/>
-                            <constraint firstItem="q7X-30-fzX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qkq-iu-N5S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jxI-dE-Jgg" secondAttribute="trailing" constant="47" id="uAV-Yq-6sG"/>
-                            <constraint firstItem="q7X-30-fzX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="uE4-ka-j79"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q7X-30-fzX" secondAttribute="trailing" constant="50" id="vFW-I6-Enb"/>
-                            <constraint firstItem="jxI-dE-Jgg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="xNv-Bz-WOA"/>
+                            <constraint firstItem="e3o-0A-9Az" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6mh-BO-Bzs"/>
+                            <constraint firstItem="ZlP-TH-YU1" firstAttribute="top" secondItem="jxI-dE-Jgg" secondAttribute="bottom" constant="20" id="Bkv-OM-06S"/>
+                            <constraint firstItem="jxI-dE-Jgg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L0X-U8-kpL"/>
+                            <constraint firstItem="e3o-0A-9Az" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O3I-c1-B3o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZlP-TH-YU1" secondAttribute="trailing" constant="53" id="WtP-3c-KFy"/>
+                            <constraint firstItem="ZlP-TH-YU1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YZr-Ym-5D1"/>
+                            <constraint firstItem="e3o-0A-9Az" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Yxy-mo-bnH"/>
+                            <constraint firstItem="ZlP-TH-YU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Zxq-jc-0TX"/>
+                            <constraint firstItem="jxI-dE-Jgg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cMW-nK-MOa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jxI-dE-Jgg" secondAttribute="trailing" constant="20" id="cas-IS-oTA"/>
+                            <constraint firstAttribute="bottom" secondItem="e3o-0A-9Az" secondAttribute="bottom" id="cgR-1T-iVr"/>
+                            <constraint firstItem="jxI-dE-Jgg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pts-an-BAs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cardLabel" destination="jxI-dE-Jgg" id="JY6-85-c6b"/>
                         <outlet property="flagButton" destination="kMo-f0-p6Q" id="3d1-cx-wwJ"/>
-                        <outlet property="progressBar" destination="4aK-XF-E7Q" id="Kk7-2H-WXE"/>
+                        <outlet property="progressBar" destination="Ui1-eN-T6A" id="fsL-YX-hxx"/>
                         <segue destination="jC8-zS-fHX" kind="presentation" identifier="GoToFinishedVC" id="FaN-Oq-VAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="94"/>
+            <point key="canvasLocation" x="273.91304347826087" y="93.75"/>
         </scene>
         <!--Finished View Controller-->
         <scene sceneID="tl0-PZ-FqE">
@@ -104,6 +116,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confetti" translatesAutoresizingMaskIntoConstraints="NO" id="Ur3-ne-WEa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bAo-x9-Zja">
                                 <rect key="frame" x="41.5" y="276" width="331" height="290"/>
                                 <subviews>
@@ -116,7 +131,7 @@
                                                     <constraint firstAttribute="height" constant="112" id="h3G-Ky-AsY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="70"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where do you want to go next?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi7-Lc-Lf9">
@@ -125,7 +140,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="VG4-RG-R8i"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -140,7 +155,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="278" id="G0Y-Lz-wVf"/>
                                                     <constraint firstAttribute="height" constant="40" id="epI-GE-NFf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Study Marked Cards">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -155,7 +170,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="278" id="6df-fQ-4Iq"/>
                                                     <constraint firstAttribute="height" constant="40" id="C5W-49-jOG"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Start Over">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -171,7 +186,11 @@
                         <viewLayoutGuide key="safeArea" id="wmf-j5-E9D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ur3-ne-WEa" firstAttribute="top" secondItem="wmf-j5-E9D" secondAttribute="top" id="BQ1-Iq-6ah"/>
                             <constraint firstItem="bAo-x9-Zja" firstAttribute="centerY" secondItem="YeO-uZ-CGe" secondAttribute="centerY" id="DMr-CE-bJN"/>
+                            <constraint firstItem="Ur3-ne-WEa" firstAttribute="leading" secondItem="wmf-j5-E9D" secondAttribute="leading" id="LEg-vx-gz3"/>
+                            <constraint firstAttribute="bottom" secondItem="Ur3-ne-WEa" secondAttribute="bottom" id="Rbq-Qp-HJl"/>
+                            <constraint firstItem="Ur3-ne-WEa" firstAttribute="trailing" secondItem="wmf-j5-E9D" secondAttribute="trailing" id="vou-Oj-Av3"/>
                             <constraint firstItem="bAo-x9-Zja" firstAttribute="centerX" secondItem="YeO-uZ-CGe" secondAttribute="centerX" id="xMS-1Q-xQ8"/>
                         </constraints>
                     </view>
@@ -185,6 +204,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="390" height="844"/>
+        <image name="Confetti" width="1430" height="953"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
