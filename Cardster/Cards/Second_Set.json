@@ -1,0 +1,21 @@
+{
+    "cards" : [
+        {
+            "front" : "diamond",
+            "back" : "el diamante"
+        },
+        {
+            "front" : "to approach",
+            "back" : "acercar"
+        },
+        {
+            "front" : "ghost",
+            "back" : "espíritu"
+        },
+        {
+            "front" : "uncomfotable",
+            "back" : "incomodo"
+        }
+    ]
+}
+

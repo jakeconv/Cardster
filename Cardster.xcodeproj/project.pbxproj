@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B235B3B125F434B000E6D594 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B235B3B025F434B000E6D594 /* WelcomeViewController.swift */; };
+		B235B3B725F4429E00E6D594 /* Second_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B235B3B625F4429E00E6D594 /* Second_Set.json */; };
 		B2AD335A25E306A700B9B7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD335925E306A700B9B7E6 /* AppDelegate.swift */; };
 		B2AD335C25E306A700B9B7E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD335B25E306A700B9B7E6 /* SceneDelegate.swift */; };
 		B2AD336325E306A800B9B7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AD336225E306A800B9B7E6 /* Assets.xcassets */; };
@@ -15,13 +17,16 @@
 		B2AD33A525E30EDA00B9B7E6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33A425E30EDA00B9B7E6 /* CardViewController.swift */; };
 		B2AD33AA25E30EE500B9B7E6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33A825E30EE500B9B7E6 /* Card.swift */; };
 		B2AD33AB25E30EE500B9B7E6 /* DeckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33A925E30EE500B9B7E6 /* DeckManager.swift */; };
-		B2AD33AE25E311F100B9B7E6 /* InitialSet.json in Resources */ = {isa = PBXBuildFile; fileRef = B2AD33AD25E311F100B9B7E6 /* InitialSet.json */; };
+		B2AD33AE25E311F100B9B7E6 /* Initial_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */; };
 		B2AD33B125E3156900B9B7E6 /* DeckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33B025E3156900B9B7E6 /* DeckData.swift */; };
 		B2AD33B525E317C800B9B7E6 /* JSONCardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */; };
 		B2BBC14F25F1A2AF00442F31 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B235B3AC25F3EAED00E6D594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B235B3B025F434B000E6D594 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B235B3B625F4429E00E6D594 /* Second_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Second_Set.json; sourceTree = "<group>"; };
 		B2AD335625E306A700B9B7E6 /* Cardster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AD335925E306A700B9B7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AD335B25E306A700B9B7E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +37,7 @@
 		B2AD33A425E30EDA00B9B7E6 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B2AD33A825E30EE500B9B7E6 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B2AD33A925E30EE500B9B7E6 /* DeckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckManager.swift; sourceTree = "<group>"; };
-		B2AD33AD25E311F100B9B7E6 /* InitialSet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InitialSet.json; sourceTree = "<group>"; };
+		B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Initial_Set.json; sourceTree = "<group>"; };
 		B2AD33B025E3156900B9B7E6 /* DeckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckData.swift; sourceTree = "<group>"; };
 		B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCardLoader.swift; sourceTree = "<group>"; };
 		B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
@@ -49,9 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B235B3AE25F42FE200E6D594 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */,
+				B235B3B625F4429E00E6D594 /* Second_Set.json */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		B2AD334D25E306A700B9B7E6 = {
 			isa = PBXGroup;
 			children = (
+				B235B3AC25F3EAED00E6D594 /* README.md */,
 				B2AD335825E306A700B9B7E6 /* Cardster */,
 				B2AD335725E306A700B9B7E6 /* Products */,
 			);
@@ -68,6 +83,7 @@
 		B2AD335825E306A700B9B7E6 /* Cardster */ = {
 			isa = PBXGroup;
 			children = (
+				B235B3AE25F42FE200E6D594 /* Cards */,
 				B2AD33A725E30EE500B9B7E6 /* Models */,
 				B2AD33A325E30EDA00B9B7E6 /* Controllers */,
 				B2AD339E25E30ED200B9B7E6 /* Views */,
@@ -76,7 +92,6 @@
 				B2AD336225E306A800B9B7E6 /* Assets.xcassets */,
 				B2AD336425E306A800B9B7E6 /* LaunchScreen.storyboard */,
 				B2AD336725E306A800B9B7E6 /* Info.plist */,
-				B2AD33AD25E311F100B9B7E6 /* InitialSet.json */,
 			);
 			path = Cardster;
 			sourceTree = "<group>";
@@ -94,6 +109,7 @@
 			children = (
 				B2AD33A425E30EDA00B9B7E6 /* CardViewController.swift */,
 				B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */,
+				B235B3B025F434B000E6D594 /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,9 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2AD33A125E30ED200B9B7E6 /* Main.storyboard in Resources */,
-				B2AD33AE25E311F100B9B7E6 /* InitialSet.json in Resources */,
+				B2AD33AE25E311F100B9B7E6 /* Initial_Set.json in Resources */,
 				B2AD336625E306A800B9B7E6 /* LaunchScreen.storyboard in Resources */,
 				B2AD336325E306A800B9B7E6 /* Assets.xcassets in Resources */,
+				B235B3B725F4429E00E6D594 /* Second_Set.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B235B3B125F434B000E6D594 /* WelcomeViewController.swift in Sources */,
 				B2BBC14F25F1A2AF00442F31 /* FinishedViewController.swift in Sources */,
 				B2AD33A525E30EDA00B9B7E6 /* CardViewController.swift in Sources */,
 				B2AD335A25E306A700B9B7E6 /* AppDelegate.swift in Sources */,

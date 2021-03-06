@@ -14,11 +14,13 @@ class CardViewController: UIViewController {
     @IBOutlet weak var flagButton: UIButton!
     @IBOutlet weak var progressLabel: UILabel!
     
-    var deckManager = DeckManager(cardFileName: "Whatever")
+    var deckManager = DeckManager(cardFileName: "")
+    var fileName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        deckManager = DeckManager(cardFileName: fileName)
         updateViewFromModel()
     }
 
@@ -53,7 +55,6 @@ class CardViewController: UIViewController {
     
     func updateViewFromModel() {
         // Update the progress and label text
-        print(deckManager.getProgress())
         progressBar.progress = deckManager.getProgress()
         let currentCard = deckManager.getCurrentCard()
         progressLabel.text = "Card \(deckManager.currentCardNumber()) of \(deckManager.count())"
@@ -79,15 +80,13 @@ class CardViewController: UIViewController {
     
     func reset() {
         // Reset the current progress and start over
-        print("WE RESETTIN")
-        deckManager = DeckManager(cardFileName: "Whatever")
+        deckManager = DeckManager(cardFileName: fileName)
         progressBar.progress = 0.0
         updateViewFromModel()
     }
     
     func studyFlaggedCards() {
         // Study only the cards that were flagged
-        print("WE FLAGGIN")
         let flaggedCards = deckManager.getFlaggedCards()
         deckManager = DeckManager(cards: flaggedCards)
         updateViewFromModel()

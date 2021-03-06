@@ -21,19 +21,10 @@ class FinishedViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func studyMarkedCardsPressed(_ sender: UIButton) {
         // Indicate that we're studying the flagged cards
-        let parentVC = self.presentingViewController as! CardViewController
+        let container = self.presentingViewController as! UINavigationController
+        let parentVC = container.viewControllers.last as! CardViewController
         parentVC.studyFlaggedCards()
         // Dismiss the popup
         self.dismiss(animated: true, completion: nil)
@@ -41,7 +32,8 @@ class FinishedViewController: UIViewController {
     
     @IBAction func startOverPressed(_ sender: UIButton) {
         // Indicate that we're starting over
-        let parentVC = self.presentingViewController as! CardViewController
+        let container = self.presentingViewController as! UINavigationController
+        let parentVC = container.viewControllers.last as! CardViewController
         parentVC.reset()
         // Dismiss the popup
         self.dismiss(animated: true, completion: nil)

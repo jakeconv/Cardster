@@ -14,13 +14,10 @@ struct DeckManager {
     
     // Initialize from the initial JSON file
     init(cardFileName: String) {
-        let filePath = Bundle.main.url(forResource: "InitialSet", withExtension: "json")
+        let filePath = Bundle.main.url(forResource: cardFileName, withExtension: "json")
         if let fileURL = filePath {
             let cardLoader = JSONCardLoader()
             cardLoader.loadCards(with: fileURL)
-            /*do {
-                sleep(5)
-            }*/
             if let loadedCards = cardLoader.cards {
                 cards = loadedCards
                 cards.shuffle()
