@@ -21,12 +21,15 @@
 		B2AD33B125E3156900B9B7E6 /* DeckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33B025E3156900B9B7E6 /* DeckData.swift */; };
 		B2AD33B525E317C800B9B7E6 /* JSONCardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */; };
 		B2BBC14F25F1A2AF00442F31 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */; };
+		B2E5D54B25F72B3C0096A035 /* IrregularPreterit_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B235B3AC25F3EAED00E6D594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B235B3B025F434B000E6D594 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B235B3B625F4429E00E6D594 /* Second_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Second_Set.json; sourceTree = "<group>"; };
+		B283C69A25FDB7B0008B59E0 /* Cardster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardster.entitlements; sourceTree = "<group>"; };
+		B283C6A025FDC296008B59E0 /* COPYING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = COPYING.md; sourceTree = "<group>"; };
 		B2AD335625E306A700B9B7E6 /* Cardster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AD335925E306A700B9B7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AD335B25E306A700B9B7E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 		B2AD33B025E3156900B9B7E6 /* DeckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckData.swift; sourceTree = "<group>"; };
 		B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCardLoader.swift; sourceTree = "<group>"; };
 		B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
+		B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IrregularPreterit_Set.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			children = (
 				B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */,
 				B235B3B625F4429E00E6D594 /* Second_Set.json */,
+				B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.json */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -66,6 +71,7 @@
 		B2AD334D25E306A700B9B7E6 = {
 			isa = PBXGroup;
 			children = (
+				B283C6A025FDC296008B59E0 /* COPYING.md */,
 				B235B3AC25F3EAED00E6D594 /* README.md */,
 				B2AD335825E306A700B9B7E6 /* Cardster */,
 				B2AD335725E306A700B9B7E6 /* Products */,
@@ -83,6 +89,7 @@
 		B2AD335825E306A700B9B7E6 /* Cardster */ = {
 			isa = PBXGroup;
 			children = (
+				B283C69A25FDB7B0008B59E0 /* Cardster.entitlements */,
 				B235B3AE25F42FE200E6D594 /* Cards */,
 				B2AD33A725E30EE500B9B7E6 /* Models */,
 				B2AD33A325E30EDA00B9B7E6 /* Controllers */,
@@ -183,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2AD33A125E30ED200B9B7E6 /* Main.storyboard in Resources */,
+				B2E5D54B25F72B3C0096A035 /* IrregularPreterit_Set.json in Resources */,
 				B2AD33AE25E311F100B9B7E6 /* Initial_Set.json in Resources */,
 				B2AD336625E306A800B9B7E6 /* LaunchScreen.storyboard in Resources */,
 				B2AD336325E306A800B9B7E6 /* Assets.xcassets in Resources */,
@@ -289,6 +297,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -343,6 +352,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -352,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cardster/Cardster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDGXG2QJ6X;
 				INFOPLIST_FILE = Cardster/Info.plist;
@@ -361,6 +372,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakeconvery.Cardster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cardster/Cardster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDGXG2QJ6X;
 				INFOPLIST_FILE = Cardster/Info.plist;
@@ -380,6 +393,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakeconvery.Cardster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

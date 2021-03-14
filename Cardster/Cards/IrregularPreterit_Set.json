@@ -1,0 +1,284 @@
+{
+    "cards" : [
+        {
+            "front" : "Estar/Yo",
+            "back" : "estuve"
+        },
+        {
+            "front" : "Estar/Tú",
+            "back" : "estuviste"
+        },
+        {
+            "front" : "Estar/Él",
+            "back" : "estuvo"
+        },
+        {
+            "front" : "Estar/Nosotros",
+            "back" : "estuvimos"
+        },
+        {
+            "front" : "Estar/Ellos",
+            "back" : "estuvieron"
+        },
+        {
+            "front" : "Poder/Yo",
+            "back" : "pude"
+        },
+        {
+            "front" : "Poder/Tú",
+            "back" : "pudiste"
+        },
+        {
+            "front" : "Poder/Él",
+            "back" : "pudo"
+        },
+        {
+            "front" : "Poder/Nosotros",
+            "back" : "pudimos"
+        },
+        {
+            "front" : "Poder/Ellos",
+            "back" : "pudieron"
+        },
+        {
+            "front" : "Querer/Yo",
+            "back" : "quise"
+        },
+        {
+            "front" : "Querer/Tú",
+            "back" : "quisiste"
+        },
+        {
+            "front" : "Querer/Él",
+            "back" : "quiso"
+        },
+        {
+            "front" : "Querer/Nosotros",
+            "back" : "quisimos"
+        },
+        {
+            "front" : "Querer/Ellos",
+            "back" : "quisieron"
+        },
+        {
+            "front" : "Tener/Yo",
+            "back" : "tuve"
+        },
+        {
+            "front" : "Tener/Tú",
+            "back" : "tuviste"
+        },
+        {
+            "front" : "Tener/Él",
+            "back" : "tuvo"
+        },
+        {
+            "front" : "Tener/Nosotros",
+            "back" : "tuvimos"
+        },
+        {
+            "front" : "Tener/Ellos",
+            "back" : "tuvieron"
+        },
+        {
+            "front" : "Caber/Yo",
+            "back" : "cupe"
+        },
+        {
+            "front" : "Caber/Tú",
+            "back" : "cupiste"
+        },
+        {
+            "front" : "Caber/Él",
+            "back" : "cupo"
+        },
+        {
+            "front" : "Caber/Ellos",
+            "back" : "cupieron"
+        },
+        {
+            "front" : "Caber/Nosotros",
+            "back" : "cupimos"
+        },
+        {
+            "front" : "Hacer/Yo",
+            "back" : "hice"
+        },
+        {
+            "front" : "Hacer/Tú",
+            "back" : "hiciste"
+        },
+        {
+            "front" : "Hacer/Él",
+            "back" : "hizo"
+        },
+        {
+            "front" : "Hacer/Nosotros",
+            "back" : "hicimos"
+        },
+        {
+            "front" : "Hacer/Ellos",
+            "back" : "hicieron"
+        },
+        {
+            "front" : "Poner/Yo",
+            "back" : "puse"
+        },
+        {
+            "front" : "Poner/Tú",
+            "back" : "pusiste"
+        },
+        {
+            "front" : "Poner/Él",
+            "back" : "puso"
+        },
+        {
+            "front" : "Poner/Nosotros",
+            "back" : "pusimos"
+        },
+        {
+            "front" : "Poner/Ellos",
+            "back" : "pusieron"
+        },
+        {
+            "front" : "Saber/Yo",
+            "back" : "supe"
+        },
+        {
+            "front" : "Saber/Tú",
+            "back" : "supiste"
+        },
+        {
+            "front" : "Saber/Él",
+            "back" : "supo"
+        },
+        {
+            "front" : "Saber/Nosotros",
+            "back" : "supimos"
+        },
+        {
+            "front" : "Saber/Ellos",
+            "back" : "supieron"
+        },
+        {
+            "front" : "Venir/Yo",
+            "back" : "vine"
+        },
+        {
+            "front" : "Venir/Tú",
+            "back" : "viniste"
+        },
+        {
+            "front" : "Venir/Él",
+            "back" : "vino"
+        },
+        {
+            "front" : "Venir/Nosotros",
+            "back" : "vinimos"
+        },
+        {
+            "front" : "Venir/Ellos",
+            "back" : "vinieron"
+        },
+        {
+            "front" : "Decir/Yo",
+            "back" : "dije"
+        },
+        {
+            "front" : "Decir/Él",
+            "back" : "dijo"
+        },
+        {
+            "front" : "Decir/Tú",
+            "back" : "dijiste"
+        },
+        {
+            "front" : "Decir/Nosotros",
+            "back" : "dijimos"
+        },
+        {
+            "front" : "Decir/Ellos",
+            "back" : "dijeron"
+        },
+        {
+            "front" : "Producir/Yo",
+            "back" : "produje"
+        },
+        {
+            "front" : "Producir/Tú",
+            "back" : "produjiste"
+        },
+        {
+            "front" : "Producir/Él",
+            "back" : "produjo"
+        },
+        {
+            "front" : "Producir/Nosotros",
+            "back" : "produjimos"
+        },
+        {
+            "front" : "Producir/Ellos",
+            "back" : "produjeron"
+        },
+        {
+            "front" : "Traer/Tú",
+            "back" : "trajiste"
+        },
+        {
+            "front" : "Traer/Yo",
+            "back" : "traje"
+        },
+        {
+            "front" : "Traer/Él",
+            "back" : "trajo"
+        },
+        {
+            "front" : "Traer/Nosotros",
+            "back" : "trajimos"
+        },
+        {
+            "front" : "Traer/Ellos",
+            "back" : "trajeron"
+        },
+        {
+            "front" : "Dar/Yo",
+            "back" : "di"
+        },
+        {
+            "front" : "Dar/Tú",
+            "back" : "diste"
+        },
+        {
+            "front" : "Dar/Él",
+            "back" : "dio"
+        },
+        {
+            "front" : "Dar/Nosotros",
+            "back" : "dimos"
+        },
+        {
+            "front" : "Dar/Ellos",
+            "back" : "dieron"
+        },
+        {
+            "front" : "Ir/Ser/Yo",
+            "back" : "fui"
+        },
+        {
+            "front" : "Ir/Ser/Tú",
+            "back" : "fuiste"
+        },
+        {
+            "front" : "Ir/Ser/Él",
+            "back" : "fue"
+        },
+        {
+            "front" : "Ir/Ser/Nosotros",
+            "back" : "fuimos"
+        },
+        {
+            "front" : "Ir/Ser/Ellos",
+            "back" : "fueron"
+        }
+    ]
+}

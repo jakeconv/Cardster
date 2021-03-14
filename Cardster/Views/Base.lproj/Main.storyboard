@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEB-QP-qFz">
-                                <rect key="frame" x="20" y="108" width="374" height="552"/>
+                                <rect key="frame" x="20" y="108" width="374" height="542"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Card" backgroundImage="Card">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-TH-YU1">
-                                <rect key="frame" x="47" y="680" width="320" height="182"/>
+                                <rect key="frame" x="47" y="670" width="320" height="182"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card 1 of 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-8R-wXt">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
@@ -176,6 +176,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZlP-TH-YU1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="23W-Wd-wfc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZlP-TH-YU1" secondAttribute="bottom" constant="10" id="8he-Je-Glc"/>
                             <constraint firstItem="ZlP-TH-YU1" firstAttribute="top" secondItem="SEB-QP-qFz" secondAttribute="bottom" constant="20" id="9Gg-Rh-eNK"/>
                             <constraint firstAttribute="bottom" secondItem="e3o-0A-9Az" secondAttribute="bottom" id="ACL-lp-ykh"/>
                             <constraint firstItem="e3o-0A-9Az" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I26-H2-sfF"/>
@@ -184,7 +185,6 @@
                             <constraint firstItem="SEB-QP-qFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qsl-v0-ff3"/>
                             <constraint firstItem="SEB-QP-qFz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YOD-ck-MOx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZlP-TH-YU1" secondAttribute="trailing" constant="47" id="fww-L8-Npe"/>
-                            <constraint firstItem="ZlP-TH-YU1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iY5-Kz-ZUT"/>
                             <constraint firstItem="ZlP-TH-YU1" firstAttribute="top" secondItem="SEB-QP-qFz" secondAttribute="bottom" constant="20" id="kJw-dZ-YxZ"/>
                             <constraint firstItem="ZlP-TH-YU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="kig-om-E3g"/>
                             <constraint firstItem="SEB-QP-qFz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qNj-fh-svF"/>
