@@ -19,6 +19,7 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = "Back"
         // Do any additional setup after loading the view.
         deckManager = DeckManager(cardFileName: fileName)
         updateViewFromModel()

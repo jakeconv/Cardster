@@ -15,6 +15,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2WR-5q-cN9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.72941176470000002" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="THe-SQ-4Ab" kind="relationship" relationship="rootViewController" id="wop-5v-Tr5"/>
@@ -190,7 +192,9 @@
                             <constraint firstItem="SEB-QP-qFz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qNj-fh-svF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Study" id="npG-Ik-qnb"/>
+                    <navigationItem key="navigationItem" title="Study" id="npG-Ik-qnb">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ZqS-nI-Pzs"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardButton" destination="SEB-QP-qFz" id="E4f-hs-tqm"/>
                         <outlet property="flagButton" destination="kMo-f0-p6Q" id="3d1-cx-wwJ"/>

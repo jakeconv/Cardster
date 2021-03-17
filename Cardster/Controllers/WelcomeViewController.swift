@@ -14,6 +14,23 @@ class WelcomeViewController: UIViewController {
     var cardFiles: [String] = []
     var selectedDeckFile = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // This will hide the navigation bar
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // This will bring back the navigation bar when switching to a different view controller
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    // This will change the apperance of the status bar, since it is difficult to see black on the background
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,6 +79,8 @@ extension WelcomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.item)
         selectedDeckFile = "\(cardFiles[indexPath.item])_Set"
+        // Deselect the row
+        decksTableView.deselectRow(at: indexPath, animated: false)
         // Go to the study screen
         self.performSegue(withIdentifier: "GoToCardVC", sender: self)
         
