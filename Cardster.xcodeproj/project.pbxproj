@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B235B3B125F434B000E6D594 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B235B3B025F434B000E6D594 /* WelcomeViewController.swift */; };
 		B235B3B725F4429E00E6D594 /* Second_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B235B3B625F4429E00E6D594 /* Second_Set.json */; };
+		B27D25392607D31D0063859C /* DeckLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D25382607D31D0063859C /* DeckLoader.swift */; };
 		B2AD335A25E306A700B9B7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD335925E306A700B9B7E6 /* AppDelegate.swift */; };
 		B2AD335C25E306A700B9B7E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD335B25E306A700B9B7E6 /* SceneDelegate.swift */; };
 		B2AD336325E306A800B9B7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AD336225E306A800B9B7E6 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		B235B3AC25F3EAED00E6D594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B235B3B025F434B000E6D594 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B235B3B625F4429E00E6D594 /* Second_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Second_Set.json; sourceTree = "<group>"; };
+		B27D25382607D31D0063859C /* DeckLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLoader.swift; sourceTree = "<group>"; };
 		B283C69A25FDB7B0008B59E0 /* Cardster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardster.entitlements; sourceTree = "<group>"; };
 		B283C6A025FDC296008B59E0 /* COPYING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = COPYING.md; sourceTree = "<group>"; };
 		B2AD335625E306A700B9B7E6 /* Cardster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				B2AD33A925E30EE500B9B7E6 /* DeckManager.swift */,
 				B2AD33B025E3156900B9B7E6 /* DeckData.swift */,
 				B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */,
+				B27D25382607D31D0063859C /* DeckLoader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				B235B3B125F434B000E6D594 /* WelcomeViewController.swift in Sources */,
 				B2BBC14F25F1A2AF00442F31 /* FinishedViewController.swift in Sources */,
 				B2AD33A525E30EDA00B9B7E6 /* CardViewController.swift in Sources */,
+				B27D25392607D31D0063859C /* DeckLoader.swift in Sources */,
 				B2AD335A25E306A700B9B7E6 /* AppDelegate.swift in Sources */,
 				B2AD33AB25E30EE500B9B7E6 /* DeckManager.swift in Sources */,
 				B2AD33B125E3156900B9B7E6 /* DeckData.swift in Sources */,

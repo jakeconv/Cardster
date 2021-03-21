@@ -35,30 +35,15 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // Get a list of possible decks
-        getCardFiles()
+        let deckLoader = DeckLoader()
+        cardFiles = deckLoader.getAllDeckFilenames()
         // Set up the table view
         decksTableView.delegate = self
         decksTableView.dataSource = self
     }
     
-    func getCardFiles(){
-        // Thanks to https://www.hackingwithswift.com/read/1/2/listing-images-with-filemanager
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath!
-        let items = try! fm.contentsOfDirectory(atPath: path)
-        var fileNames: [String] = []
-        for item in items {
-            if item.hasSuffix("_Set.json") {
-                // This is a card deck.
-                fileNames.append(String(item.dropLast(9)))
-            }
-        }
-        // Sort alphabetically
-        cardFiles = fileNames.sorted {$0 < $1}
-        print(cardFiles)
-    }
 }
-
+    
 // MARK: UITableViewDataSource
 extension WelcomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,6 +63,7 @@ extension WelcomeViewController: UITableViewDataSource {
 extension WelcomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.item)
+        print(cardFiles[indexPath.item])
         selectedDeckFile = "\(cardFiles[indexPath.item])_Set"
         // Deselect the row
         decksTableView.deselectRow(at: indexPath, animated: false)

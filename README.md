@@ -5,7 +5,7 @@ This is just a very basic, no frills flashcard app that I wrote to kill two bird
 
 ## Running the app
 
-This app was designed for iOS 14.4 using Swift 5 in Xcode 12.4.  To get started, clone this repository into a directory of your choosing.  Locate the Cardster.xcodeproj file, open it, and then select the target of your choosing- wether it be an iPhone or iPad in the simulator, a real iOS device, or a Mac.
+This app was designed for iOS 14.4 using Swift 5 in Xcode 12.4.  To get started, clone this repository into a directory of your choosing.  Locate the Cardster.xcodeproj file, open it, and then select the target of your choosing- wether it be an iPhone or iPad in the simulator, a real iOS device, or a Mac, and hit the play button.
 
 ## Using the app
 
@@ -13,4 +13,4 @@ Upon launch, the app will display all of the card decks that are available.  Tap
 
 ## Adding new cards
 
-As it currently stands, cards are loaded in from a JSON file containing an array of cards, and some example sets are included in the Cards directory.  If you would like to add additional cards, then I would recommend adding them into this directory before building and running the app.  Card file names must end in "_Set.json".  If they do not have this ending, then the app won't find them.  Within each file, there is an array of items, and each item must contain a string value for "front" and "back".  Once again, see one of the example sets to see how this should look.  For a simple macOS app to help build decks, please see one of my other projects, [Cardster Editor](https://github.com/jakeconv/CardsterEditor).
+As it currently stands, cards are loaded in from a JSON file containing an array of cards, and some example sets are included in the Cards directory.  Card file names must end in "_Set.json".  If they do not have this ending, then the app won't find them.  Within each file, there is an array of items, and each item must contain a string value for "front" and "back".  Once again, see one of the example sets to get an idea of how should look.  Upon the first run of the app, a documents directory will be created and you can add in these deck files from the Files app in iOS.  Or, deck files can be added into the Cards directory visible within Xcode.  For a simple macOS app to help build decks, please see one of my other projects, [Cardster Editor](https://github.com/jakeconv/CardsterEditor).

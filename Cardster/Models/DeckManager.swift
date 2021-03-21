@@ -13,9 +13,16 @@ struct DeckManager {
     var currentCardIsFlipped = false
     
     // Initialize from the initial JSON file
+    // TODO: Clean this up a bit
     init(cardFileName: String) {
-        let filePath = Bundle.main.url(forResource: cardFileName, withExtension: "json")
-        if let fileURL = filePath {
+        // First, check and see if we're working with a deck from the documents directory.
+        let fm = FileManager.default
+        let path = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = path.appendingPathComponent("\(cardFileName).json")
+        print(fileURL.path)
+        if (fm.fileExists(atPath: fileURL.path)) {
+            // File exists.  We're good.
+            print("This deck is from the documents directory.")
             let cardLoader = JSONCardLoader()
             cardLoader.loadCards(with: fileURL)
             if let loadedCards = cardLoader.cards {
@@ -27,7 +34,23 @@ struct DeckManager {
             }
         }
         else {
-            cards = [Card(front: "An error occured", back: "Loading this deck")]
+            print("\(cardFileName) is not from the documents directory.")
+            // This deck is coming from the app bundle
+            let filePath = Bundle.main.url(forResource: cardFileName, withExtension: "json")
+            if let bundleFileURL = filePath {
+                let cardLoader = JSONCardLoader()
+                cardLoader.loadCards(with: bundleFileURL)
+                if let loadedCards = cardLoader.cards {
+                    cards = loadedCards
+                    cards.shuffle()
+                }
+                else {
+                    cards = [Card(front: "An error occured", back: "Loading this deck")]
+                }
+            }
+            else {
+                cards = [Card(front: "An error occured", back: "Loading this deck")]
+            }
         }
     }
     
