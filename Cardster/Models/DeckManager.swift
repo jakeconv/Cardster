@@ -13,15 +13,14 @@ struct DeckManager {
     var currentCardIsFlipped = false
     
     // Initialize from the initial JSON file
-    // TODO: Clean this up a bit
-    init(cardFileName: String) {
-        // First, check and see if we're working with a deck from the documents directory.
-        let fm = FileManager.default
-        let path = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = path.appendingPathComponent("\(cardFileName).json")
-        print(fileURL.path)
-        if (fm.fileExists(atPath: fileURL.path)) {
-            // File exists.  We're good.
+    init(cardFile: CardFile) {
+        switch cardFile.location {
+        // The card file object will tell where to find the card file
+        case .documents:
+            // Look for the deck file in the documents directory
+            let fm = FileManager.default
+            let path = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let fileURL = path.appendingPathComponent(cardFile.fileName)
             print("This deck is from the documents directory.")
             let cardLoader = JSONCardLoader()
             cardLoader.loadCards(with: fileURL)
@@ -29,14 +28,13 @@ struct DeckManager {
                 cards = loadedCards
                 cards.shuffle()
             }
-            else{
+            else {
                 cards = [Card(front: "An error occured", back: "Loading this deck")]
             }
-        }
-        else {
-            print("\(cardFileName) is not from the documents directory.")
-            // This deck is coming from the app bundle
-            let filePath = Bundle.main.url(forResource: cardFileName, withExtension: "json")
+        case .bundle:
+            print("This deck is from the app bundle.")
+            // Load the deck file from the bundle
+            let filePath = Bundle.main.url(forResource: cardFile.displayName, withExtension: "card")
             if let bundleFileURL = filePath {
                 let cardLoader = JSONCardLoader()
                 cardLoader.loadCards(with: bundleFileURL)
@@ -53,7 +51,7 @@ struct DeckManager {
             }
         }
     }
-    
+
     // Initialize from a subset of preloaded cards
     init(cards: [Card]) {
         self.cards = cards

@@ -13,19 +13,21 @@ struct DeckLoader {
     let fm = FileManager.default
     
     // All deck files
-    var deckFiles: [String] = []
+    var deckFiles: [CardFile] = []
     
     init() {
         // Get the card filenames upon initializing this struct
         readCardFilesFromBundle()
         readCardFilesFromDocuments()
+        // Sort the decks alphabetically
+        sort()
     }
     
     mutating func readCardFilesFromBundle() {
         // Thanks to https://www.hackingwithswift.com/read/1/2/listing-images-with-filemanager
         let path = Bundle.main.resourcePath!
         let files = try! fm.contentsOfDirectory(atPath: path)
-        checkForDecks(files)
+        checkForDecks(files, location: .bundle)
     }
     
     mutating func readCardFilesFromDocuments() {
@@ -35,7 +37,7 @@ struct DeckLoader {
             let path = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
             do {
                 let files = try fm.contentsOfDirectory(atPath: path.path)
-                checkForDecks(files)
+                checkForDecks(files, location: .documents)
             
             } catch {
                 print(error.localizedDescription)
@@ -43,14 +45,19 @@ struct DeckLoader {
         }
     }
     
-    mutating func checkForDecks(_ files: [String]) {
+    mutating func checkForDecks(_ files: [String], location: CardFileLocation) {
         for item in files {
             // Look for files that look like decks
-            if item.hasSuffix("_Set.json") {
+            if item.hasSuffix(".card") {
                 // This is a card deck.
-                deckFiles.append(String(item.dropLast(9)))
+                deckFiles.append(CardFile(fileName: item, location: location))
             }
         }
+    }
+    
+    mutating func sort() {
+        // Sort the files alphabetically
+        deckFiles = deckFiles.sorted(by: {$0.displayName < $1.displayName})
     }
     
     func checkForDocumentsDirectory() -> Bool {
@@ -64,7 +71,7 @@ struct DeckLoader {
         }
         else {
             // Readme file does not exist.  Create it now.
-            let readmeText = "Drop any custom decks into this directoy for them to appear in the Cardster app.  Be sure to have the filename end in \"_Set.json\"."
+            let readmeText = "Drop any custom decks into this directoy for them to appear in the Cardster app.  Be sure to se the extension \".card\"."
             do {
                 try readmeText.write(to: fileURL, atomically: true, encoding: .utf8)
             } catch {
@@ -74,9 +81,18 @@ struct DeckLoader {
         }
     }
     
-    func getAllDeckFilenames() -> [String] {
-        // Return a sorted list of all available deck files.
-        return deckFiles.sorted {$0 < $1}
+    func getAllDeckDisplayNames() -> [String] {
+        // Return a list of all available deck files.
+        var filenames: [String] = []
+        for file in deckFiles {
+            filenames.append(file.displayName)
+        }
+        return filenames
+    }
+    
+    func getCardFile(at index: Int) -> CardFile {
+        // Return a specified card file
+        return deckFiles[index]
     }
     
 }

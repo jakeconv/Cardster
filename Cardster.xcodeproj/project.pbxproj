@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B235B3B125F434B000E6D594 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B235B3B025F434B000E6D594 /* WelcomeViewController.swift */; };
-		B235B3B725F4429E00E6D594 /* Second_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B235B3B625F4429E00E6D594 /* Second_Set.json */; };
+		B235B3B725F4429E00E6D594 /* Second_Set.card in Resources */ = {isa = PBXBuildFile; fileRef = B235B3B625F4429E00E6D594 /* Second_Set.card */; };
 		B27D25392607D31D0063859C /* DeckLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D25382607D31D0063859C /* DeckLoader.swift */; };
 		B2AD335A25E306A700B9B7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD335925E306A700B9B7E6 /* AppDelegate.swift */; };
 		B2AD335C25E306A700B9B7E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD335B25E306A700B9B7E6 /* SceneDelegate.swift */; };
@@ -18,17 +18,18 @@
 		B2AD33A525E30EDA00B9B7E6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33A425E30EDA00B9B7E6 /* CardViewController.swift */; };
 		B2AD33AA25E30EE500B9B7E6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33A825E30EE500B9B7E6 /* Card.swift */; };
 		B2AD33AB25E30EE500B9B7E6 /* DeckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33A925E30EE500B9B7E6 /* DeckManager.swift */; };
-		B2AD33AE25E311F100B9B7E6 /* Initial_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */; };
+		B2AD33AE25E311F100B9B7E6 /* Initial_Set.card in Resources */ = {isa = PBXBuildFile; fileRef = B2AD33AD25E311F100B9B7E6 /* Initial_Set.card */; };
 		B2AD33B125E3156900B9B7E6 /* DeckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33B025E3156900B9B7E6 /* DeckData.swift */; };
 		B2AD33B525E317C800B9B7E6 /* JSONCardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */; };
 		B2BBC14F25F1A2AF00442F31 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */; };
-		B2E5D54B25F72B3C0096A035 /* IrregularPreterit_Set.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.json */; };
+		B2E5D54B25F72B3C0096A035 /* IrregularPreterit_Set.card in Resources */ = {isa = PBXBuildFile; fileRef = B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.card */; };
+		B2FCA2CA260C1138003A524D /* CardFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCA2C9260C1138003A524D /* CardFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B235B3AC25F3EAED00E6D594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B235B3B025F434B000E6D594 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		B235B3B625F4429E00E6D594 /* Second_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Second_Set.json; sourceTree = "<group>"; };
+		B235B3B625F4429E00E6D594 /* Second_Set.card */ = {isa = PBXFileReference; lastKnownFileType = text; path = Second_Set.card; sourceTree = "<group>"; };
 		B27D25382607D31D0063859C /* DeckLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLoader.swift; sourceTree = "<group>"; };
 		B283C69A25FDB7B0008B59E0 /* Cardster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cardster.entitlements; sourceTree = "<group>"; };
 		B283C6A025FDC296008B59E0 /* COPYING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = COPYING.md; sourceTree = "<group>"; };
@@ -42,11 +43,12 @@
 		B2AD33A425E30EDA00B9B7E6 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B2AD33A825E30EE500B9B7E6 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B2AD33A925E30EE500B9B7E6 /* DeckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckManager.swift; sourceTree = "<group>"; };
-		B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Initial_Set.json; sourceTree = "<group>"; };
+		B2AD33AD25E311F100B9B7E6 /* Initial_Set.card */ = {isa = PBXFileReference; lastKnownFileType = text; path = Initial_Set.card; sourceTree = "<group>"; };
 		B2AD33B025E3156900B9B7E6 /* DeckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckData.swift; sourceTree = "<group>"; };
 		B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCardLoader.swift; sourceTree = "<group>"; };
 		B2BBC14E25F1A2AF00442F31 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
-		B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IrregularPreterit_Set.json; sourceTree = "<group>"; };
+		B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.card */ = {isa = PBXFileReference; lastKnownFileType = text; path = IrregularPreterit_Set.card; sourceTree = "<group>"; };
+		B2FCA2C9260C1138003A524D /* CardFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +65,9 @@
 		B235B3AE25F42FE200E6D594 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				B2AD33AD25E311F100B9B7E6 /* Initial_Set.json */,
-				B235B3B625F4429E00E6D594 /* Second_Set.json */,
-				B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.json */,
+				B2AD33AD25E311F100B9B7E6 /* Initial_Set.card */,
+				B235B3B625F4429E00E6D594 /* Second_Set.card */,
+				B2E5D54A25F72B3C0096A035 /* IrregularPreterit_Set.card */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -131,6 +133,7 @@
 				B2AD33B025E3156900B9B7E6 /* DeckData.swift */,
 				B2AD33B425E317C800B9B7E6 /* JSONCardLoader.swift */,
 				B27D25382607D31D0063859C /* DeckLoader.swift */,
+				B2FCA2C9260C1138003A524D /* CardFile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,11 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2AD33A125E30ED200B9B7E6 /* Main.storyboard in Resources */,
-				B2E5D54B25F72B3C0096A035 /* IrregularPreterit_Set.json in Resources */,
-				B2AD33AE25E311F100B9B7E6 /* Initial_Set.json in Resources */,
+				B2E5D54B25F72B3C0096A035 /* IrregularPreterit_Set.card in Resources */,
+				B2AD33AE25E311F100B9B7E6 /* Initial_Set.card in Resources */,
 				B2AD336625E306A800B9B7E6 /* LaunchScreen.storyboard in Resources */,
 				B2AD336325E306A800B9B7E6 /* Assets.xcassets in Resources */,
-				B235B3B725F4429E00E6D594 /* Second_Set.json in Resources */,
+				B235B3B725F4429E00E6D594 /* Second_Set.card in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +215,7 @@
 				B2BBC14F25F1A2AF00442F31 /* FinishedViewController.swift in Sources */,
 				B2AD33A525E30EDA00B9B7E6 /* CardViewController.swift in Sources */,
 				B27D25392607D31D0063859C /* DeckLoader.swift in Sources */,
+				B2FCA2CA260C1138003A524D /* CardFile.swift in Sources */,
 				B2AD335A25E306A700B9B7E6 /* AppDelegate.swift in Sources */,
 				B2AD33AB25E30EE500B9B7E6 /* DeckManager.swift in Sources */,
 				B2AD33B125E3156900B9B7E6 /* DeckData.swift in Sources */,

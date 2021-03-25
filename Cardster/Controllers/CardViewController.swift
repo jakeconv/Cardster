@@ -14,34 +14,34 @@ class CardViewController: UIViewController {
     @IBOutlet weak var flagButton: UIButton!
     @IBOutlet weak var progressLabel: UILabel!
     
-    var deckManager = DeckManager(cardFileName: "")
-    var fileName = ""
+    var deckManager: DeckManager?
+    var cardFile: CardFile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.title = "Back"
         // Do any additional setup after loading the view.
-        deckManager = DeckManager(cardFileName: fileName)
+        deckManager = DeckManager(cardFile: cardFile!)
         updateViewFromModel()
     }
 
     @IBAction func backButtonPressed(_ sender: Any) {
         // Go back to the last card
-        deckManager.lastCard()
+        deckManager?.lastCard()
         updateViewFromModel()
     }
     
     @IBAction func flagButtonPressed(_ sender: Any) {
         // Flag the current card for review
-        deckManager.flag()
+        deckManager?.flag()
         updateViewFromModel()
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         // Go to the next card
-        deckManager.nextCard()
+        deckManager?.nextCard()
         // Check and see if the deck has been completed
-        if (deckManager.deckHasCompleted()) {
+        if (deckManager!.deckHasCompleted()) {
             // Run the popup
             self.performSegue(withIdentifier: "GoToFinishedVC", sender: self)
         }
@@ -50,28 +50,28 @@ class CardViewController: UIViewController {
     
     @IBAction func cardButtonPressed(_ sender: UIButton) {
         // User tapped on the index card.  Flip the card.
-        deckManager.flip()
+        deckManager?.flip()
         updateViewFromModel()
     }
     
     func updateViewFromModel() {
         // Update the progress and label text
-        progressBar.progress = deckManager.getProgress()
-        let currentCard = deckManager.getCurrentCard()
-        progressLabel.text = "Card \(deckManager.currentCardNumber()) of \(deckManager.count())"
-        if (deckManager.currentCardIsFlipped) {
+        progressBar.progress = deckManager?.getProgress() ?? 0.0
+        let currentCard = deckManager?.getCurrentCard()
+        progressLabel.text = "Card \(deckManager!.currentCardNumber()) of \(deckManager!.count())"
+        if (deckManager!.currentCardIsFlipped) {
             UIView.performWithoutAnimation {
-                cardButton.setTitle(currentCard.back, for: .normal)
+                cardButton.setTitle(currentCard?.back, for: .normal)
                 cardButton.layoutIfNeeded()
             }
         }
         else {
             UIView.performWithoutAnimation {
-                cardButton.setTitle(currentCard.front, for: .normal)
+                cardButton.setTitle(currentCard?.front, for: .normal)
                 cardButton.layoutIfNeeded()
             }
         }
-        if (currentCard.isFlagged) {
+        if (currentCard!.isFlagged) {
             flagButton.setTitle("Unflag", for: .normal)
         }
         else {
@@ -81,15 +81,15 @@ class CardViewController: UIViewController {
     
     func reset() {
         // Reset the current progress and start over
-        deckManager = DeckManager(cardFileName: fileName)
+        deckManager = DeckManager(cardFile: cardFile!)
         progressBar.progress = 0.0
         updateViewFromModel()
     }
     
     func studyFlaggedCards() {
         // Study only the cards that were flagged
-        let flaggedCards = deckManager.getFlaggedCards()
-        deckManager = DeckManager(cards: flaggedCards)
+        let flaggedCards = deckManager?.getFlaggedCards()
+        deckManager = DeckManager(cards: flaggedCards!)
         updateViewFromModel()
     }
     
@@ -100,7 +100,7 @@ class CardViewController: UIViewController {
             // This is called downcasting- we cast it down to Result View
             // the ! indicates that this is a forced downcast
             let destinationVC = segue.destination as! FinishedViewController
-            let flaggedCards = deckManager.getFlaggedCards()
+            let flaggedCards = deckManager!.getFlaggedCards()
             if (flaggedCards.count > 0) {
                 destinationVC.cardsAreFlagged = true
             } else {

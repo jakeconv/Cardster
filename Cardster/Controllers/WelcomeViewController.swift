@@ -11,8 +11,9 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var decksTableView: UITableView!
     
-    var cardFiles: [String] = []
-    var selectedDeckFile = ""
+    var cardFileDisplayNames: [String] = []
+    var selectedDeckFile: CardFile?
+    var deckLoader = DeckLoader()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,8 +36,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // Get a list of possible decks
-        let deckLoader = DeckLoader()
-        cardFiles = deckLoader.getAllDeckFilenames()
+        cardFileDisplayNames = deckLoader.getAllDeckDisplayNames()
         // Set up the table view
         decksTableView.delegate = self
         decksTableView.dataSource = self
@@ -48,12 +48,12 @@ class WelcomeViewController: UIViewController {
 extension WelcomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Let the table count be the total number of card files
-        return cardFiles.count
+        return cardFileDisplayNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
-        cell.textLabel?.text = cardFiles[indexPath.item]
+        cell.textLabel?.text = cardFileDisplayNames[indexPath.item]
         return cell
     }
     
@@ -63,8 +63,8 @@ extension WelcomeViewController: UITableViewDataSource {
 extension WelcomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.item)
-        print(cardFiles[indexPath.item])
-        selectedDeckFile = "\(cardFiles[indexPath.item])_Set"
+        print(cardFileDisplayNames[indexPath.item])
+        selectedDeckFile = deckLoader.getCardFile(at: indexPath.item) // This index will allign with the deck files
         // Deselect the row
         decksTableView.deselectRow(at: indexPath, animated: false)
         // Go to the study screen
@@ -79,7 +79,9 @@ extension WelcomeViewController: UITableViewDelegate {
             // This is called downcasting- we cast it down to Result View
             // the ! indicates that this is a forced downcast
             let destinationVC = segue.destination as! CardViewController
-            destinationVC.fileName = selectedDeckFile
+            if let targetDeckFile = selectedDeckFile {
+                destinationVC.cardFile = targetDeckFile
+            }
         }
         
     }
