@@ -29,6 +29,7 @@ class JSONCardLoader {
                         cards.append(newCard)
                     }
                     self.cards = cards
+                    print(self.cards)
                 }
                 else {
                     return

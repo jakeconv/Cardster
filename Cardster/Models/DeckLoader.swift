@@ -64,6 +64,7 @@ struct DeckLoader {
         let path = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
         // See if a readme file exists.  This is needed for the Cardster folder to appear in the files app.
         let fileURL = path.appendingPathComponent("readme.txt")
+        print(fileURL)
         if (fm.fileExists(atPath: fileURL.path)) {
             // File exists.  We're good.
             print("Readme file exists.")

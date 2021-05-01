@@ -22,6 +22,7 @@ struct DeckManager {
             let path = fm.urls(for: .documentDirectory, in: .userDomainMask).first!
             let fileURL = path.appendingPathComponent(cardFile.fileName)
             print("This deck is from the documents directory.")
+            print(fileURL)
             let cardLoader = JSONCardLoader()
             cardLoader.loadCards(with: fileURL)
             if let loadedCards = cardLoader.cards {
